@@ -115,3 +115,49 @@ for(int i = 0; i < radios.length; i++){
         android:layout_gravity="center"
         android:text="Sprawdź" />
     </LinearLayout>
+
+    import android.os.Bundle;
+    import android.view.View;
+    import android.widget.Button;
+    import android.widget.EditText;
+    
+    import androidx.activity.EdgeToEdge;
+    import androidx.appcompat.app.AppCompatActivity;
+    
+    
+    public class MainActivity extends AppCompatActivity {
+        private Button przelicz;
+        private EditText szesnascie1;
+        private EditText szesnascie2;
+        private EditText szesnascie3;
+        private EditText dziesiec1;
+        private EditText dziesiec2;
+        private EditText dziesiec3;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+
+        przelicz = findViewById(R.id.przelicz);
+
+        szesnascie1 = findViewById(R.id.szesnascie1);
+        szesnascie2 = findViewById(R.id.szesnascie2);
+        szesnascie3 = findViewById(R.id.szesnascie3);
+
+        dziesiec1 = findViewById(R.id.dziesiec1);
+        dziesiec2 = findViewById(R.id.dziesiec2);
+        dziesiec3 = findViewById(R.id.dziesiec3);
+
+        szesnascie1.setOnFocusChangeListener(
+                new View.OnFocusChangeListener() {
+                    @Override
+                    public void onFocusChange(View view, boolean b) {
+                        
+                    }
+                }
+        );
+    }
+}
